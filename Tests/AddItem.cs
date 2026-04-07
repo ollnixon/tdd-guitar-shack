@@ -41,6 +41,6 @@ public class AddItemWithInsufficientProductStockAndNoStockOnHold
         var product = new Product(327, 1, 0, "Ibanez Tube Screamer");
         const int saleQty = 2;
         
-        Assert.Throws<InsufficentStockException>(() => order.AddItem(product, saleQty));
+        Assert.Throws<InsufficientStockException>(() => order.AddItem(product, saleQty));
     }
 }

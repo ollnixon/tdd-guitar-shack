@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="GuitarShack/GuitarShack.csproj" />
-  <Project Path="Tests\Tests.csproj" />
+  <Project Path="Tests/Tests.csproj" />
 </Solution>

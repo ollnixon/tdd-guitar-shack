@@ -1,4 +1,5 @@
 using GuitarShack;
+using Xunit;
 
 namespace Tests;
 

@@ -2,5 +2,3 @@
   <Project Path="GuitarShack/GuitarShack.csproj" />
   <Project Path="Tests\Tests.csproj" />
 </Solution>
-
-  <Project Path="tdd-guitar-shack.csproj" />

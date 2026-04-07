@@ -1,4 +1,4 @@
-namespace GuitarShack;
+namespace Tests;
 
 public class UnitTest1
 {

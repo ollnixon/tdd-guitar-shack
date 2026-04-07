@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Tests;
 
-public class AddItem
+public class AddItemWithSufficientProductStock
 {
     [Fact]
     public void TestProductIsPutOnTemporaryHold()
@@ -29,5 +29,18 @@ public class AddItem
         order.AddItem(product, saleQty);
        
         Assert.Equal(new OrderLineItem(327, 1), order.LineItems.First());
+    }
+}
+
+public class AddItemWithInsufficientProductStockAndNoStockOnHold
+{
+    [Fact]
+    public void TestErrorIsRaisedProductHasInsufficientStock()
+    {
+        var order = new Order();
+        var product = new Product(327, 1, 0, "Ibanez Tube Screamer");
+        const int saleQty = 2;
+        
+        Assert.Throws<InsufficentStockException>(() => order.AddItem(product, saleQty));
     }
 }

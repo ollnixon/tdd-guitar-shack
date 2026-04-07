@@ -4,7 +4,7 @@ public class Order
 {
     public Product AddItem(Product product, int saleQty)
     {
-        LineItems = [new OrderLineItem(327, 1)];
+        LineItems = [new OrderLineItem(product.Id, saleQty)];
         return product with { Hold = 1 };
     }
 

@@ -17,4 +17,17 @@ public class AddItem
         
         Assert.Equal(1, product.Hold);
     }
+
+    [Fact]
+    public void TestProductIsInTheOrder()
+    {
+        var order = new Order();
+        
+        var product = new Product(327, 7, 0);
+        const int saleQty = 1;
+        
+        order.AddItem(product, saleQty);
+       
+        Assert.Equal(new OrderLineItem(327, 1), order.LineItems.First());
+    }
 }

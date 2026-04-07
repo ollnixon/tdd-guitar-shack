@@ -1,0 +1,4 @@
+{
+  "name": "GuitarShack",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:latest"
+}

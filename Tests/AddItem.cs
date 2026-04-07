@@ -1,3 +1,5 @@
+using GuitarShack;
+
 namespace Tests;
 
 public class AddItem
@@ -15,13 +17,3 @@ public class AddItem
         Assert.Equal(1, product.Hold);
     }
 }
-
-public class Order
-{
-    public Product AddItem(Product product, int saleQty)
-    {
-        return product with { Hold = 1 };
-    }
-}
-
-public record Product(int Id, int Stock, int Hold);
